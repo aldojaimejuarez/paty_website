@@ -11,7 +11,7 @@ const Hero: React.FC = () => {
             <div className="bg-gradient-to-br from-rose-200 to-orange-200 rounded-2xl p-4 transform rotate-3 shadow-xl w-64 h-96 sm:w-80 sm:h-[28rem] lg:w-[32rem] lg:h-[48rem] flex items-center justify-center mx-auto">
               <div className="bg-white rounded-xl p-2 transform -rotate-3 shadow-lg w-full h-full flex items-center justify-center">
                 <img
-                  src="/images/paty_zepeda.png"
+                  src="./images/paty_zepeda.png"
                   alt="Paty Zepeda - Abogada"
                   className="w-full h-full object-cover rounded-lg"
                 />

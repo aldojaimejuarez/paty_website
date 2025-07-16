@@ -11,7 +11,7 @@ const Products: React.FC = () => {
       originalPrice: 399,
       rating: 4.9,
       reviews: 127,
-      image: '/images/tips_notariales.jpg',
+      image: './images/tips_notariales.jpg',
       type: 'digital',
       icon: <Book className="h-5 w-5" />
     },
@@ -23,7 +23,7 @@ const Products: React.FC = () => {
       originalPrice: 249,
       rating: 4.8,
       reviews: 89,
-      image: '/images/checklist_para_vender_tu_casa.jpg',
+      image: './images/checklist_para_vender_tu_casa.jpg',
       type: 'digital',
       icon: <FileText className="h-5 w-5" />
     },
@@ -35,7 +35,7 @@ const Products: React.FC = () => {
       originalPrice: 799,
       rating: 4.9,
       reviews: 156,
-      image: '/images/guia_comprar_casa.jpg',
+      image: './images/guia_comprar_casa.jpg',
       type: 'course',
       icon: <Video className="h-5 w-5" />
     },
@@ -47,7 +47,7 @@ const Products: React.FC = () => {
       originalPrice: 199,
       rating: 4.7,
       reviews: 73,
-      image: '/images/guia_cotizaciones.jpg',
+      image: './images/guia_cotizaciones.jpg',
       type: 'digital',
       icon: <FileText className="h-5 w-5" />
     },
