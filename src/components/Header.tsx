@@ -26,10 +26,10 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onSectionChange }) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <Scale className="h-8 w-8 text-rose-400" />
+            <Scale className="h-8 w-8 text-primary" />
             <div>
-              <h1 className="text-xl font-bold text-gray-800">Paty Zepeda</h1>
-              <p className="text-sm text-gray-600">Abogada</p>
+              <h1 className="text-xl font-bold text-text">Paty Zepeda</h1>
+              <p className="text-sm text-secondary">Abogada</p>
             </div>
           </div>
 
@@ -39,8 +39,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onSectionChange }) => {
               <button
                 key={item.id}
                 onClick={() => onSectionChange(item.id)}
-                className={`text-gray-700 hover:text-rose-500 transition-colors font-medium ${
-                  activeSection === item.id ? 'text-rose-500' : ''
+                className={`text-text hover:text-primary transition-colors font-medium ${
+                  activeSection === item.id ? 'text-primary' : ''
                 }`}
               >
                 {item.label}
@@ -50,11 +50,11 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onSectionChange }) => {
 
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-gray-600">
+            <div className="flex items-center space-x-2 text-secondary">
               <Phone className="h-4 w-4" />
               <span className="text-sm">+52 55 1234 5678</span>
             </div>
-            <div className="flex items-center space-x-2 text-gray-600">
+            <div className="flex items-center space-x-2 text-secondary">
               <Mail className="h-4 w-4" />
               <span className="text-sm">paty@zepeda.com</span>
             </div>
@@ -62,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onSectionChange }) => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-gray-600"
+            className="md:hidden p-2 text-secondary"
             onClick={toggleMenu}
           >
             {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -71,7 +71,7 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onSectionChange }) => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden mt-4 pb-4 border-t border-gray-200">
+          <nav className="md:hidden mt-4 pb-4 border-t border-accent">
             <div className="flex flex-col space-y-3 pt-4">
               {navItems.map((item) => (
                 <button
@@ -80,8 +80,8 @@ const Header: React.FC<HeaderProps> = ({ activeSection, onSectionChange }) => {
                     onSectionChange(item.id);
                     setIsMenuOpen(false);
                   }}
-                  className={`text-left py-2 text-gray-700 hover:text-rose-500 transition-colors ${
-                    activeSection === item.id ? 'text-rose-500' : ''
+                  className={`text-left py-2 text-text hover:text-primary transition-colors ${
+                    activeSection === item.id ? 'text-primary' : ''
                   }`}
                 >
                   {item.label}

@@ -78,14 +78,14 @@ const Products: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-gradient-to-br from-rose-50 via-pink-50 to-orange-100 overflow-hidden">
+    <section className="relative py-24 bg-gradient-to-br from-accent via-background to-secondary overflow-hidden">
       {/* Blobs decorativos */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-rose-200 opacity-20 rounded-full blur-3xl z-0" />
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-orange-200 opacity-20 rounded-full blur-3xl z-0" />
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-accent opacity-20 rounded-full blur-3xl z-0" />
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-secondary opacity-20 rounded-full blur-3xl z-0" />
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-extrabold text-gray-800 mb-4 tracking-tight drop-shadow-lg animate-fade-in-up">Productos Digitales</h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto animate-fade-in-up delay-200">
+          <h2 className="text-4xl font-extrabold text-text mb-4 tracking-tight drop-shadow-lg animate-fade-in-up">Productos Digitales</h2>
+          <p className="text-xl text-secondary max-w-2xl mx-auto animate-fade-in-up delay-200">
             Accede a recursos legales especializados para resolver tus dudas jurídicas de manera rápida y efectiva.
           </p>
         </div>
@@ -93,30 +93,30 @@ const Products: React.FC = () => {
           {products.slice(0, 4).map((product, idx) => (
             <div
               key={product.id}
-              className="group bg-white/80 rounded-3xl shadow-2xl hover:shadow-rose-200 transition-all duration-300 hover:-translate-y-2 flex flex-col overflow-hidden animate-fade-in-up"
+              className="group bg-white/80 rounded-3xl shadow-2xl hover:shadow-accent transition-all duration-300 hover:-translate-y-2 flex flex-col overflow-hidden animate-fade-in-up"
               style={{ animationDelay: `${0.1 * idx}s` }}
             >
               <div className="relative overflow-hidden">
                 <img
                   src={product.image}
                   alt={product.title}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110 rounded-t-3xl border-b-4 border-rose-100"
+                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110 rounded-t-3xl border-b-4 border-accent"
                 />
-                <div className="absolute top-4 left-4 bg-rose-500 text-white px-4 py-1 rounded-full text-xs font-semibold shadow-lg uppercase tracking-wider">
+                <div className="absolute top-4 left-4 bg-accent text-white px-4 py-1 rounded-full text-xs font-semibold shadow-lg uppercase tracking-wider">
                   {product.type === 'digital' ? 'Digital' : 'Curso'}
                 </div>
               </div>
               <div className="flex-1 flex flex-col p-7">
-                <h3 className="text-lg font-bold text-gray-800 mb-2 tracking-tight group-hover:text-rose-500 transition-colors">
+                <h3 className="text-lg font-bold text-text mb-2 tracking-tight group-hover:text-primary transition-colors">
                   {product.title}
                 </h3>
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
+                <p className="text-secondary mb-4 text-sm leading-relaxed">
                   {product.description}
                 </p>
                 <div className="flex items-center gap-2 mb-4 mt-auto">
-                  <span className="text-2xl font-bold text-gray-800">${product.price}</span>
-                  <span className="text-sm text-gray-500 line-through">${product.originalPrice}</span>
-                  <span className="bg-rose-100 text-rose-600 px-2 py-1 rounded text-xs font-medium ml-auto">
+                  <span className="text-2xl font-bold text-text">${product.price}</span>
+                  <span className="text-sm text-secondary line-through">${product.originalPrice}</span>
+                  <span className="bg-accent text-primary px-2 py-1 rounded text-xs font-medium ml-auto">
                     {Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)}% OFF
                   </span>
                 </div>
@@ -125,7 +125,7 @@ const Products: React.FC = () => {
                     href="https://hotmart.com/es/marketplace/productos/checklist-para-vender-tu-propiedad-sin-que-el-notario-te-regrese-por-papeles/K100575031I"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-xl font-bold shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-2 text-base group"
+                    className="w-full bg-primary hover:bg-secondary text-white py-3 rounded-xl font-bold shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-2 text-base group"
                   >
                     <span>Comprar Ahora</span>
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -135,13 +135,13 @@ const Products: React.FC = () => {
                     href="https://pay.hotmart.com/B100646364G?bid=1752645880721"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-xl font-bold shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-2 text-base group"
+                    className="w-full bg-primary hover:bg-secondary text-white py-3 rounded-xl font-bold shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-2 text-base group"
                   >
                     <span>Comprar Ahora</span>
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                   </a>
                 ) : (
-                  <button className="w-full bg-rose-500 hover:bg-rose-600 text-white py-3 rounded-xl font-bold shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-2 text-base group">
+                  <button className="w-full bg-primary hover:bg-secondary text-white py-3 rounded-xl font-bold shadow-lg transition-all duration-300 flex items-center justify-center gap-2 mt-2 text-base group">
                     <span>Comprar Ahora</span>
                     <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                   </button>

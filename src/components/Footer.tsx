@@ -36,11 +36,8 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Servicios</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-rose-400 transition-colors">Derecho Familiar</a></li>
               <li><a href="#" className="hover:text-rose-400 transition-colors">Derecho Corporativo</a></li>
               <li><a href="#" className="hover:text-rose-400 transition-colors">Derecho Civil</a></li>
-              <li><a href="#" className="hover:text-rose-400 transition-colors">Litigio</a></li>
-              <li><a href="#" className="hover:text-rose-400 transition-colors">Derecho Laboral</a></li>
               <li><a href="#" className="hover:text-rose-400 transition-colors">Derecho Penal</a></li>
             </ul>
           </div>
